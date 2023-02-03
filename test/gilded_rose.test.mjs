@@ -45,9 +45,11 @@ describe("Gilded Rose", () => {
   });
   
   it("should new Item(\"\")", () => {
-    const gildedRose = new Shop([new Item("", 0, 0)]);
+    const gildedRose = new Shop([new Item("", 0, 0), new Item("", 1, 50)]);
     const items = gildedRose.updateQuality();
     expect(items[0].quality).to.equal(0); 
+    expect(items[1].sellIn).to.equal(0); 
+    expect(items[1].quality).to.equal(49); 
   });
 
 
