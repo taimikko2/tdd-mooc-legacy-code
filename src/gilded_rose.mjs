@@ -52,6 +52,12 @@ export class Shop {
           this.lessQuality(i);
         }
       }
+      if (this.items[i].name == "Conjured items") {
+        this.lessQuality(i);
+        if (this.items[i].sellIn < 0) {
+          this.lessQuality(i);
+        }
+      } 
     }
 
     return this.items;
