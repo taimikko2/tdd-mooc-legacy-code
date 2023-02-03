@@ -53,9 +53,9 @@ describe("Gilded Rose", () => {
     ]);
     const items = gildedRose.updateQuality();
     expect(items[0].sellIn).to.equal(3);
-    expect(items[0].quality).to.equal(3);
+    expect(items[0].quality).to.equal(80);
     expect(items[1].sellIn).to.equal(-1);
-    expect(items[1].quality).to.equal(10);
+    expect(items[1].quality).to.equal(80);
   });
 
   it("should []", () => {
