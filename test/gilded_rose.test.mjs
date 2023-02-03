@@ -20,7 +20,14 @@ describe("Gilded Rose", () => {
     expect(items[0].name).to.equal("foo");
     expect(items[0].quality).to.equal(1); 
   });
-  
+
+  it("should Sulfuras, Hand of Ragnaros", () => {
+    const gildedRose = new Shop([new Item("Sulfuras, Hand of Ragnaros", 3, 3)]);
+    const items = gildedRose.updateQuality();
+    //expect(items[0].quality).to.equal(1); 
+    expect(items[0].sellIn).to.equal(3); 
+  });
+
   it("should []", () => {
     const gildedRose = new Shop();
     const items = gildedRose.updateQuality();
