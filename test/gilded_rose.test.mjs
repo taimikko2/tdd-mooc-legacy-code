@@ -20,7 +20,6 @@ describe("Gilded Rose", () => {
       new Item("Backstage passes to a TAFKAL80ETC concert", 11, 11),
       new Item("Backstage passes to a TAFKAL80ETC concert", 4, 5),
       new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-
     ]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
@@ -48,10 +47,15 @@ describe("Gilded Rose", () => {
   });
 
   it("should Sulfuras, Hand of Ragnaros", () => {
-    const gildedRose = new Shop([new Item("Sulfuras, Hand of Ragnaros", 3, 3)]);
+    const gildedRose = new Shop([
+      new Item("Sulfuras, Hand of Ragnaros", 3, 3),
+      new Item("Sulfuras, Hand of Ragnaros", -1, 10),
+    ]);
     const items = gildedRose.updateQuality();
     expect(items[0].sellIn).to.equal(3);
     expect(items[0].quality).to.equal(3);
+    expect(items[1].sellIn).to.equal(-1);
+    expect(items[1].quality).to.equal(10);
   });
 
   it("should []", () => {
