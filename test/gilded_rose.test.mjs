@@ -22,10 +22,10 @@ describe("Gilded Rose", () => {
   });
 
   it("should Sulfuras, Hand of Ragnaros", () => {
-    const gildedRose = new Shop([new Item("Sulfuras, Hand of Ragnaros", 3, 3), new Item("", 0, 0)]);
+    const gildedRose = new Shop([new Item("Sulfuras, Hand of Ragnaros", 3, 3)]);
     const items = gildedRose.updateQuality();
     expect(items[0].sellIn).to.equal(3); 
-    expect(items[1].quality).to.equal(0); 
+    expect(items[0].quality).to.equal(3); 
   });
 
   it("should []", () => {
@@ -34,6 +34,13 @@ describe("Gilded Rose", () => {
     expect(items.length).to.equal(0);
   });
   
+  it("should new Item(\"\")", () => {
+    const gildedRose = new Shop([new Item("", 0, 0)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).to.equal(0); 
+  });
+
+
   it("should handle several items", () => {
     let originalItems = [new Item("Aged Brie", 2, 50), new Item("Backstage passes to a TAFKAL80ETC concert", 3, 3), new Item("foo", 4, 4)];
     const gildedRose = new Shop(originalItems);
