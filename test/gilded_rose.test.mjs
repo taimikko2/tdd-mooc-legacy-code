@@ -18,6 +18,7 @@ describe("Gilded Rose", () => {
       new Item("Backstage passes to a TAFKAL80ETC concert", 50, 50),
       new Item("Backstage passes to a TAFKAL80ETC concert", 6, 6),
       new Item("Backstage passes to a TAFKAL80ETC concert", 11, 11),
+      new Item("Backstage passes to a TAFKAL80ETC concert", 4, 5),
     ]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
@@ -29,6 +30,8 @@ describe("Gilded Rose", () => {
     expect(items[2].quality).to.equal(8);
     expect(items[3].sellIn).to.equal(10);
     expect(items[3].quality).to.equal(12);
+    expect(items[4].sellIn).to.equal(3);
+    expect(items[4].quality).to.equal(8);
   });
 
   it("should foo", () => {
