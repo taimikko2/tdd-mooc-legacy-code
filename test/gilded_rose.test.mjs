@@ -3,12 +3,12 @@ import { Item, Shop } from "../src/gilded_rose.mjs";
 
 describe("Gilded Rose", () => {
   it("should Aged Brie", () => {
-    const gildedRose = new Shop([new Item("Aged Brie", 0, 0), new Item("Aged Brie", 50, 50)]);
+    const gildedRose = new Shop([new Item("Aged Brie", 0, 0), new Item("Aged Brie", 0, 50)]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).to.equal("Aged Brie");
     expect(items[0].sellIn).to.equal(-1); 
     expect(items[0].quality).to.equal(2); 
-    expect(items[1].sellIn).to.equal(49); 
+    expect(items[1].sellIn).to.equal(-1); 
     expect(items[1].quality).to.equal(50); 
   });
 
