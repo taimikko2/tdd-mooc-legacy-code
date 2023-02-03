@@ -91,7 +91,7 @@ describe("Gilded Rose", () => {
     expect(items[0].name).to.equal("Conjured items");
     //expect(items[0].sellIn).to.equal(-1);
     //expect(items[0].quality).to.equal(1);
-    //expect(items[1].sellIn).to.equal(4);
-    //expect(items[1].quality).to.equal(8);
+    expect(items[1].sellIn).to.equal(4);
+    expect(items[1].quality).to.equal(8);
   });
 });
