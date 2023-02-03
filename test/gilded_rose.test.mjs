@@ -20,4 +20,10 @@ describe("Gilded Rose", () => {
     expect(items[0].name).to.equal("foo");
   });
   
+  it("should []]", () => {
+    const gildedRose = new Shop();
+    const items = gildedRose.updateQuality();
+    expect(items.length).to.equal(0);
+  });
+  
 });
