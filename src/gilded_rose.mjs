@@ -43,12 +43,16 @@ export class Shop {
         this.lessQuality(i);
       }
 
-      if (this.items[i].sellIn < 0) {
-        if (this.items[i].name == "Aged Brie") {
+      if (this.items[i].name == "Aged Brie") {
+        if (this.items[i].sellIn < 0) {
           this.addQuality(i);
-        } else if (this.items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
+        }
+      } else if (this.items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
+        if (this.items[i].sellIn < 0) {
           this.items[i].quality = 0;
-        } else {
+        }
+      } else {
+        if (this.items[i].sellIn < 0) {
           this.lessQuality(i);
         }
       }
