@@ -58,9 +58,11 @@ export class Shop {
         if (this.items[i].sellIn < 0) {
           this.lessQuality(i);
         }
-      } 
+      }
+      if (this.items[i].quality > 50) {
+        this.items[i].quality = 50;
+      }
     }
-
     return this.items;
   }
 }

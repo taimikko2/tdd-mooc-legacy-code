@@ -43,7 +43,7 @@ describe("Gilded Rose", () => {
     expect(items[0].name).to.equal("foo");
     expect(items[0].quality).to.equal(1);
     expect(items[1].sellIn).to.equal(59);
-    expect(items[1].quality).to.equal(59);
+    expect(items[1].quality).to.equal(50);
   });
 
   it("should Sulfuras, Hand of Ragnaros", () => {
